@@ -38,6 +38,11 @@ modules:
         - gnome-software
         - gnome-software-rpm-ostree
         - PackageKit-glib
+  
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - AdwaitaMono
 
   - type: default-flatpaks
     configurations:
