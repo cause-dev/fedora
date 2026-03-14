@@ -51,8 +51,8 @@ modules:
 
   - type: gnome-extensions
     install:
-	- AppIndicator and KStatusNotifierItem Support
-	- 4478 # Net Speed
-	- 8852 # ScreenToSpace
+      - AppIndicator and KStatusNotifierItem Support
+      - 4478
+      - 8852
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
