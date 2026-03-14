@@ -65,9 +65,10 @@ modules:
       - dconf-update-service
 
   - type: chezmoi
-      repository: 'https://github.com/cause-dev/dotfiles'
-      branch: "main"
-      file-conflict-policy: replace
-      disable-update: true
+    install: false
+    repository: 'https://github.com/cause-dev/dotfiles'
+    branch: "main"
+    file-conflict-policy: replace
+    disable-update: true
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
