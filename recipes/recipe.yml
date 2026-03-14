@@ -28,7 +28,6 @@ modules:
         - fish
         - android-tools
         - distrobox
-        - chezmoi
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -65,10 +64,10 @@ modules:
       - dconf-update-service
 
   - type: chezmoi
-    install: false
+    disable-init: true
     repository: 'https://github.com/cause-dev/dotfiles'
     branch: "main"
-    file-conflict-policy: replace
+    file-conflict-policy: "replace"
     disable-update: true
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
