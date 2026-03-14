@@ -1,0 +1,55 @@
+[org.gnome.desktop.interface]
+color-scheme='prefer-dark'
+enable-hot-corners=true
+show-battery-percentage=true
+
+[org.gnome.mutter]
+edge-tiling=true
+dynamic-workspaces=true
+
+[org.gnome.shell.app-switcher]
+current-workspace-only=true
+
+[org.gnome.desktop.peripherals.mouse]
+speed=1.0
+
+[org.gnome.settings-daemon.plugins.media-keys]
+home=['<Super>e']
+www=['<Super>b']
+control-center=['<Super>comma']
+
+[org.gnome.shell.keybindings]
+focus-active-notification=@as []
+toggle-message-tray=['<Super>n']
+
+[org.gnome.mutter]
+center-new-windows=true
+
+[org.gnome.mutter.wayland.keybindings]
+restore-shortcuts=@as []
+
+[org.gnome.desktop.wm.keybindings]
+close=['<Super>q']
+
+[org.gnome.Ptyxis]
+restore-window-size=false
+restore-session=false
+font-name='AdwaitaMono Nerd Font 10'
+
+[org.gtk.gtk4.settings.file-chooser]
+sort-directories-first=true
+
+[org.gnome.nautilus.preferences]
+default-folder-viewer='icon-view'
+
+[org.gnome.desktop.privacy]
+recent-files-max-age=30
+remove-old-trash-files=true
+old-files-age=uint32 14
+
+[org.gtk.settings.file-chooser]
+clock-format='12h'
+
+[org.gnome.desktop.interface]
+clock-show-weekday=true
+clock-show-date=true
