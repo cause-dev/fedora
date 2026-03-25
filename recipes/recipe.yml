@@ -21,6 +21,7 @@ modules:
     repos:
       copr:
         - atim/starship
+        - jdxcode/mise
     install:
       packages:
         - micro
@@ -28,6 +29,10 @@ modules:
         - fish
         - android-tools
         - distrobox
+        - mise
+        - bat
+        - lsd
+        - lazygit
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -37,6 +42,10 @@ modules:
         - gnome-software
         - gnome-software-rpm-ostree
         - PackageKit-glib
+  
+  - type: script
+    scripts:
+      - set-shell.sh
   
   - type: fonts
     fonts:
@@ -49,24 +58,24 @@ modules:
         scope: system
         # If no repo information is specified, Flathub will be used by default
         install: # system flatpaks we want all users to have and not remove
-          - org.mozilla.firefox
-          - org.gnome.Loupe
-          - com.github.neithern.g4music
-          - com.mattjakeman.ExtensionManager
-          - com.ranfdev.DistroShelf
-          - dev.vencord.Vesktop
-          - io.github.flattool.Warehouse
-          - org.cryptomator.Cryptomator
-          - org.gnome.DejaDup
-          - org.gnome.FileRoller
-          - org.signal.Signal
-          - com.visualstudio.code
-          - md.obsidian.Obsidian
-          - com.github.tchx84.Flatseal
-          - io.mpv.Mpv
+          - org.mozilla.firefox # Firefox (Browser)
+          - org.gnome.Loupe # Loupe (Image Viewer)
+          - com.github.neithern.g4music # Gapless (Music Player)
+          - io.github.flattool.Warehouse # Warehouse
+          - org.gnome.DejaDup # DejaDub (Backup)
+          - org.gnome.FileRoller # File Roller
+          - com.github.tchx84.Flatseal # Flatseal
+          - io.mpv.Mpv # MPV (Media Player)
           - org.gnome.NautilusPreviewer
-          - org.gnome.Papers
+          - org.gnome.Papers # Papers (Pdf Viewer)
       - scope: user # Also add Flathub user repo, but no user packages
+        install:
+          - dev.vencord.Vesktop # Vesktop (Discord)
+          - org.cryptomator.Cryptomator # Cryptomator
+          - org.signal.Signal # Signal
+          - com.visualstudio.code # Visual Studio Code
+          - md.obsidian.Obsidian # Obsidian
+          - com.ranfdev.DistroShelf # DistroShelf (Distrobox)
 
   - type: gnome-extensions
     install:
@@ -79,7 +88,7 @@ modules:
       - dconf-update-service
 
   - type: chezmoi
-    disable-init: true
+    disable-init: false
     repository: 'https://github.com/cause-dev/dotfiles'
     branch: "main"
     file-conflict-policy: "replace"
