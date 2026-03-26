@@ -13,23 +13,8 @@ current-workspace-only=true
 [org.gnome.desktop.peripherals.mouse]
 speed=1.0
 
-[org.gnome.settings-daemon.plugins.media-keys]
-home=['<Super>e']
-www=['<Super>b']
-control-center=['<Super>comma']
-
-[org.gnome.shell.keybindings]
-focus-active-notification=@as []
-toggle-message-tray=['<Super>n']
-
 [org.gnome.mutter]
 center-new-windows=true
-
-[org.gnome.mutter.wayland.keybindings]
-restore-shortcuts=@as []
-
-[org.gnome.desktop.wm.keybindings]
-close=['<Super>q']
 
 [org.gnome.Ptyxis]
 restore-window-size=false
