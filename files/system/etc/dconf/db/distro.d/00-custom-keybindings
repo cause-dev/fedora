@@ -24,12 +24,5 @@ binding='<Shift><Control>Escape'
 command='gnome-system-monitor'
 name='System Monitor'
 
-[org/gnome/shell/keybindings]
-focus-active-notification=@as []
-toggle-message-tray=['<Super>n']
-
-[org/gnome/mutter/wayland/keybindings]
-restore-shortcuts=@as []
-
-[org/gnome/desktop/wm/keybindings]
-close=['<Super>q']
+[org/gnome/desktop/peripherals/mouse]
+speed=1.0
