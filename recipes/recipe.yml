@@ -51,6 +51,10 @@ modules:
     fonts:
       nerd-fonts:
         - AdwaitaMono
+  
+  - type: gschema-overrides
+    include:
+      - zz1-myoverride.gschema.override
 
   - type: default-flatpaks
     configurations:
