@@ -10,6 +10,9 @@ edge-tiling=true
 dynamic-workspaces=true
 center-new-windows=true
 
+[org.gnome.shell]
+enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'netspeed@alynx.one', 'screentospace@dilzhan.dev']
+
 [org.gnome.shell.app-switcher]
 current-workspace-only=true
 
