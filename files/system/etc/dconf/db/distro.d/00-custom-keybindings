@@ -1,9 +1,3 @@
-[org/gnome/settings-daemon/plugins/media-keys]
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
-home=['<Super>e']
-www=['<Super>b']
-control-center=['<Super>comma']
-
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Shift><Control>Delete'
 command='gio trash --empty'
@@ -23,6 +17,3 @@ name='Terminal'
 binding='<Shift><Control>Escape'
 command='gnome-system-monitor'
 name='System Monitor'
-
-[org/gnome/desktop/peripherals/mouse]
-speed=1.0

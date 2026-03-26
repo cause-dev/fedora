@@ -13,6 +13,15 @@ center-new-windows=true
 [org.gnome.shell.app-switcher]
 current-workspace-only=true
 
+[org.gnome.settings-daemon.plugins.media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
+home=['<Super>e']
+www=['<Super>b']
+control-center=['<Super>comma']
+
+[org.gnome.desktop.peripherals.mouse]
+speed=1.0
+
 [org.gnome.shell.keybindings]
 focus-active-notification=@as []
 toggle-message-tray=['<Super>n']
@@ -28,7 +37,7 @@ restore-window-size=false
 restore-session=false
 font-name='AdwaitaMono Nerd Font 10'
 
-[org.gtk.gtk4.settings.file-chooser]
+[org.gtk.gtk4.Settings.FileChooser]
 sort-directories-first=true
 
 [org.gnome.nautilus.preferences]
@@ -39,5 +48,5 @@ recent-files-max-age=30
 remove-old-trash-files=true
 old-files-age=uint32 14
 
-[org.gtk.settings.file-chooser]
+[org.gtk.Settings.FileChooser]
 clock-format='12h'
