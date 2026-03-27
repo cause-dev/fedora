@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Wrapper to allow Flatpaks to run podman on the host
+/usr/bin/flatpak-spawn --host /usr/bin/podman "$@"

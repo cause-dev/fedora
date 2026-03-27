@@ -33,6 +33,8 @@ modules:
         - bat
         - lsd
         - age
+	- podman-compose
+	- podman-docker
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -106,6 +108,8 @@ modules:
         - rpm-ostreed-automatic.timer
     
     user:
+      enabled:
+      	- podman.socket
       disabled:
         - user-flatpak-setup.timer
         - flatpak-user-update.timer
