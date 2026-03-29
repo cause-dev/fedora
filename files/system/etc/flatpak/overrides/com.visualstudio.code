@@ -1,8 +1,0 @@
-[Context]
-filesystems=xdg-run/podman:ro;host;
-
-[Session Bus Policy]
-org.freedesktop.Flatpak=talk
-
-[Environment]
-DOCKER_HOST=unix:///run/user/1000/podman/podman.sock
