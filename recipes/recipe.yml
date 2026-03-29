@@ -19,6 +19,11 @@ modules:
 
   - type: dnf
     repos:
+      cleanup: true
+      files:
+        - https://packages.microsoft.com/yumrepos/vscode/config.repo
+      keys:
+        - https://packages.microsoft.com/yumrepos/vscode/repodata/repomd.xml.key
       copr:
         - atim/starship
         - jdxcode/mise
@@ -35,6 +40,7 @@ modules:
         - age
         - podman-compose
         - podman-docker
+        - code
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -44,16 +50,16 @@ modules:
         - gnome-software
         - gnome-software-rpm-ostree
         - PackageKit-glib
-  
+
   - type: script
     scripts:
       - set-shell.sh
-  
+
   - type: fonts
     fonts:
       nerd-fonts:
         - AdwaitaMono
-  
+
   - type: gschema-overrides
     include:
       - zz1-myoverride.gschema.override
@@ -79,7 +85,6 @@ modules:
           - dev.vencord.Vesktop # Vesktop (Discord)
           - org.cryptomator.Cryptomator # Cryptomator
           - org.signal.Signal # Signal
-          - com.visualstudio.code # Visual Studio Code
           - md.obsidian.Obsidian # Obsidian
           - com.ranfdev.DistroShelf # DistroShelf (Distrobox)
 
@@ -88,25 +93,25 @@ modules:
       - AppIndicator and KStatusNotifierItem Support
       - 4478
       - 8852
-  
+
   - type: bling
     install:
       - dconf-update-service
 
   - type: chezmoi
     disable-init: false
-    repository: 'https://github.com/cause-dev/dotfiles'
+    repository: "https://github.com/cause-dev/dotfiles"
     branch: "main"
     file-conflict-policy: "replace"
     disable-update: true
-  
+
   - type: systemd
     system:
       disabled:
         - system-flatpak-setup.timer
         - flatpak-system-update.timer
         - rpm-ostreed-automatic.timer
-    
+
     user:
       disabled:
         - user-flatpak-setup.timer
