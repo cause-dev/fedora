@@ -1,0 +1,9 @@
+[Context]
+filesystems=host;/tmp;xdg-run/podman;
+sockets=wayland;ssh-auth;
+
+[Session Bus Policy]
+org.freedesktop.Flatpak=talk
+
+[Environment]
+DOCKER_HOST=unix:///run/user/1000/podman/podman.sock

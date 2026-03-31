@@ -1,0 +1,6 @@
+type: chezmoi
+disable-init: false
+repository: "https://github.com/cause-dev/dotfiles"
+branch: "main"
+file-conflict-policy: "replace"
+disable-update: true

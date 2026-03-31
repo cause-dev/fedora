@@ -1,0 +1,23 @@
+type: default-flatpaks
+configurations:
+  - scope: system
+    # If no repo information is specified, Flathub will be used by default
+    install: # system flatpaks we want all users to have and not remove
+      - org.mozilla.firefox # Firefox (Browser)
+      - com.visualstudio.code
+      - org.gnome.Loupe # Loupe (Image Viewer)
+      - com.github.neithern.g4music # Gapless (Music Player)
+      - io.github.flattool.Warehouse # Warehouse
+      - org.gnome.DejaDup # DejaDub (Backup)
+      - org.gnome.FileRoller # File Roller
+      - com.github.tchx84.Flatseal # Flatseal
+      - io.mpv.Mpv # MPV (Media Player)
+      - org.gnome.NautilusPreviewer
+      - org.gnome.Papers # Papers (Pdf Viewer)
+  - scope: user # Also add Flathub user repo, but no user packages
+    install:
+      - dev.vencord.Vesktop # Vesktop (Discord)
+      - org.cryptomator.Cryptomator # Cryptomator
+      - org.signal.Signal # Signal
+      - md.obsidian.Obsidian # Obsidian
+      - com.ranfdev.DistroShelf # DistroShelf (Distrobox)
