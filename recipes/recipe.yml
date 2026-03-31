@@ -19,7 +19,17 @@ modules:
 
   - from-file: includes/packages.yml
 
-  - from-file: includes/settings.yml
+  - from-file: includes/scripts.yml
+
+  - from-file: includes/fonts.yml
+
+  - from-file: includes/gschema.yml
+
+  - from-file: includes/extensions.yml
+
+  - from-file: includes/bling.yml
+
+  - from-file: includes/flatpaks.yml
 
   - from-file: includes/chezmoi.yml
 

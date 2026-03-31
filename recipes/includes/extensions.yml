@@ -1,0 +1,5 @@
+type: gnome-extensions
+install:
+  - AppIndicator and KStatusNotifierItem Support
+  - 4478
+  - 8852
