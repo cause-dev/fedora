@@ -1,0 +1,12 @@
+[Unit]
+Description=Shutdown at 11 PM nightly
+
+[Timer]
+# 23:00 is 11 PM
+OnCalendar=*-*-* 23:00:00
+# Set Persistent=false so it doesn't shut down immediately 
+# if you turn the laptop on at 11:05 PM.
+Persistent=false
+
+[Install]
+WantedBy=timers.target

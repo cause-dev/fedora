@@ -1,5 +1,8 @@
 type: systemd
 system:
+  enabled:
+    - nightly-shutdown.timer
+    - nightly-enforcer.service
   disabled:
     - system-flatpak-setup.timer
     - flatpak-system-update.timer
