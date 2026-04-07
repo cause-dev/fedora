@@ -3,17 +3,28 @@ configurations:
   - scope: system
     # If no repo information is specified, Flathub will be used by default
     install: # system flatpaks we want all users to have and not remove
-      - org.mozilla.firefox # Firefox (Browser)
-      - com.visualstudio.code
+      - org.gnome.TextEditor
+      - org.gnome.baobab
+      - org.gnome.clocks
+      - org.gnome.font-viewer
       - org.gnome.Loupe # Loupe (Image Viewer)
-      - com.github.neithern.g4music # Gapless (Music Player)
-      - io.github.flattool.Warehouse # Warehouse
       - org.gnome.DejaDup # DejaDub (Backup)
       - org.gnome.FileRoller # File Roller
-      - com.github.tchx84.Flatseal # Flatseal
-      - io.mpv.Mpv # MPV (Media Player)
       - org.gnome.NautilusPreviewer
       - org.gnome.Papers # Papers (Pdf Viewer)
+      - org.gnome.Boxes
+      - org.gnome.Calculator
+      - org.gnome.Calendar
+      - org.gnome.Characters
+      - org.gnome.Logs
+      - org.gnome.Snapshot
+      - org.mozilla.firefox # Firefox (Browser)
+      - com.visualstudio.code
+      - com.github.neithern.g4music # Gapless (Music Player)
+      - io.github.flattool.Warehouse # Warehouse
+      - com.github.tchx84.Flatseal # Flatseal
+      - io.github.diegopvlk.Cine # Cine (Media Player)
+      - io.github.IshuSinghSE.aurynk
   - scope: user # Also add Flathub user repo, but no user packages
     install:
       - dev.vencord.Vesktop # Vesktop (Discord)
@@ -21,3 +32,5 @@ configurations:
       - org.signal.Signal # Signal
       - md.obsidian.Obsidian # Obsidian
       - com.ranfdev.DistroShelf # DistroShelf (Distrobox)
+      - be.alexandervanhee.gradia
+      - io.github.wartybix.Constrict
