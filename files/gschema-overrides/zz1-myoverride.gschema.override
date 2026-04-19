@@ -7,11 +7,17 @@ clock-show-date=true
 
 [org.gnome.mutter]
 edge-tiling=true
-dynamic-workspaces=true
+dynamic-workspaces=false
 center-new-windows=true
 
+[org.gnome.desktop.wm.preferences]
+num-workspaces=4
+
 [org.gnome.shell]
-enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'netspeed@alynx.one', 'screentospace@dilzhan.dev']
+enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'netspeed@alynx.one', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com']
+
+[org.gnome.shell.extensions.auto-move-windows]
+application-list=['org.gnome.Ptyxis.desktop:1', 'com.visualstudio.code.desktop:1', 'org.mozilla.firefox.desktop:1', 'org.gnome.Nautilus.desktop:2', 'io.github.diegopvlk.Cine.desktop:2', 'dev.vencord.Vesktop.desktop:3', 'io.bassi.Amberol.desktop:2']
 
 [org.gnome.shell.app-switcher]
 current-workspace-only=true
@@ -28,12 +34,42 @@ speed=1.0
 [org.gnome.shell.keybindings]
 focus-active-notification=@as []
 toggle-message-tray=['<Super>n']
+# Disable the Dock/Dash app switching
+switch-to-application-1=@as []
+switch-to-application-2=@as []
+switch-to-application-3=@as []
+switch-to-application-4=@as []
+switch-to-application-5=@as []
+switch-to-application-6=@as []
+switch-to-application-7=@as []
+switch-to-application-8=@as []
+switch-to-application-9=@as []
 
 [org.gnome.mutter.wayland.keybindings]
 restore-shortcuts=@as []
 
 [org.gnome.desktop.wm.keybindings]
 close=['<Super>q']
+# Map Super + Number to Workspace switching
+switch-to-workspace-1=['<Super>1']
+switch-to-workspace-2=['<Super>2']
+switch-to-workspace-3=['<Super>3']
+switch-to-workspace-4=['<Super>4']
+switch-to-workspace-5=['<Super>5']
+switch-to-workspace-6=['<Super>6']
+switch-to-workspace-7=['<Super>7']
+switch-to-workspace-8=['<Super>8']
+switch-to-workspace-9=['<Super>9']
+# Map Super + Shift + Number to Move Window to Workspace
+move-to-workspace-1=['<Super><Shift>1']
+move-to-workspace-2=['<Super><Shift>2']
+move-to-workspace-3=['<Super><Shift>3']
+move-to-workspace-4=['<Super><Shift>4']
+move-to-workspace-5=['<Super><Shift>5']
+move-to-workspace-6=['<Super><Shift>6']
+move-to-workspace-7=['<Super><Shift>7']
+move-to-workspace-8=['<Super><Shift>8']
+move-to-workspace-9=['<Super><Shift>9']
 
 [org.gnome.Ptyxis]
 restore-window-size=false
