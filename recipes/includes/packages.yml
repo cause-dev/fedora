@@ -3,19 +3,19 @@ repos:
   copr:
     - atim/starship
     - jdxcode/mise
+    - varlad/zellij
 install:
   packages:
     - micro
     - starship
     - fish
     - android-tools
-    - distrobox
     - mise
     - bat
     - lsd
     - age
-    - podman-docker
     - podman-compose
+    - zellij
 remove:
   packages:
     # example: removing firefox (in favor of the flatpak)
