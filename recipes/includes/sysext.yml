@@ -1,3 +1,4 @@
 type: sysext
+source: local
 install:
   - vscode
