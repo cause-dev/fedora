@@ -19,7 +19,6 @@ configurations:
       - org.gnome.Logs
       - org.gnome.Snapshot
       - org.mozilla.firefox # Firefox (Browser)
-      - com.visualstudio.code
       - com.github.neithern.g4music # Gapless (Music Player)
       - io.github.flattool.Warehouse # Warehouse
       - com.github.tchx84.Flatseal # Flatseal
@@ -29,8 +28,6 @@ configurations:
     install:
       - dev.vencord.Vesktop # Vesktop (Discord)
       - org.cryptomator.Cryptomator # Cryptomator
-      - org.signal.Signal # Signal
       - md.obsidian.Obsidian # Obsidian
-      - com.ranfdev.DistroShelf # DistroShelf (Distrobox)
       - be.alexandervanhee.gradia
       - io.github.wartybix.Constrict
