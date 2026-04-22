@@ -1,4 +1,6 @@
 type: sysext
 source: local
-install:
+community:
   - vscode
+fedora:
+  - helix

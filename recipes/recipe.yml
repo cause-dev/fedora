@@ -23,9 +23,9 @@ modules:
 
   - from-file: includes/fonts.yml
 
-  - from-file: includes/gschema.yml
-
   - from-file: includes/extensions.yml
+
+  - from-file: includes/gschema.yml
 
   - from-file: includes/bling.yml
 
