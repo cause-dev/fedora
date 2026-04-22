@@ -1,56 +1,68 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# 1. Read the "install" array from the recipe
+# 1. Read the list of apps from the recipe
 get_json_array INSTALL_LIST 'try .["install"][]' "$1"
 
-echo "Configuring System Extensions for: ${INSTALL_LIST[*]}"
+echo "Setting up System Extension configs for: ${INSTALL_LIST[*]}"
 
-# 2. Setup tmpfiles to ensure /var directories exist on every boot
+# 2. Initialization: Ensure /var folders are created on boot
 mkdir -p /usr/lib/tmpfiles.d
 cat <<EOF > /usr/lib/tmpfiles.d/sysext.conf
 d /var/lib/extensions     0755 root root  -   -
 d /var/lib/extensions.d   0755 root root  -   -
 EOF
 
-# 3. Create sysupdate configurations for each app in the list
+# 3. Configuration: Create the .transfer file for each app
 for APP in "${INSTALL_LIST[@]}"; do
     mkdir -p "/etc/sysupdate.${APP}.d"
-    cat <<EOF > "/etc/sysupdate.${APP}.d/${APP}.conf"
+    # Using .transfer extension as suggested by systemd v257+
+    cat <<EOF > "/etc/sysupdate.${APP}.d/${APP}.transfer"
 [Transfer]
 Verify=false
 
 [Source]
 Type=url-file
-Path=https://extensions.fcos.fr/community/
-Name=${APP}.raw.xz
+Path=https://extensions.fcos.fr/community/${APP}/
+MatchPattern=${APP}-@v-%w-%a.raw
 
 [Target]
-Type=extensions-directory
-Path=/var/lib/extensions
+InstancesMax=2
+Type=regular-file
+Path=/var/lib/extensions.d/
+MatchPattern=${APP}-@v-%w-%a.raw
+CurrentSymlink=/var/lib/extensions/${APP}.raw
 EOF
 done
 
-# 4. Generate the 'sysext-mgr' CLI tool
-# We pass the list of apps directly into the script
+# 4. Activation: Enable the merging service
+systemctl enable systemd-sysext.service
+
+# 5. The CLI Tool: Updated with your specific update loop
 cat <<EOF > /usr/bin/sysext-mgr
 #!/bin/bash
+# List of apps from build-time
 APPS=(${INSTALL_LIST[*]})
 
 case "\$1" in
     install)
         echo "Installing listed extensions: \${APPS[*]}"
         for app in "\${APPS[@]}"; do
+            echo "--- Pulling \$app ---"
             sudo /usr/lib/systemd/systemd-sysupdate update --component "\$app"
         done
+        echo "Restarting merge service..."
         sudo systemctl restart systemd-sysext.service
-        sudo update-desktop-database /usr/share/applications
+        sudo update-desktop-database /usr/share/applications || true
         ;;
     update)
-        echo "Updating all system extensions..."
+        echo "Checking for updates for all components..."
+        # Your specific loop using jq to iterate through registered components
         for c in \$(/usr/lib/systemd/systemd-sysupdate components --json=short | jq --raw-output '.components[]'); do
+            echo "Checking component: \$c"
             sudo /usr/lib/systemd/systemd-sysupdate update --component "\$c"
         done
+        echo "Refreshing merges..."
         sudo systemctl restart systemd-sysext.service
         ;;
     status)
@@ -64,7 +76,3 @@ esac
 EOF
 
 chmod +x /usr/bin/sysext-mgr
-
-# 5. Enable the systemd-sysext service
-# This creates the symlink in the image so it starts on boot
-systemctl enable systemd-sysext.service
