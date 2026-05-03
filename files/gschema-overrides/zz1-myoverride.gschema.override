@@ -14,7 +14,7 @@ center-new-windows=true
 num-workspaces=4
 
 [org.gnome.shell]
-enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'netspeed@alynx.one', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com']
 
 [org.gnome.shell.extensions.auto-move-windows]
 application-list=['org.gnome.Ptyxis.desktop:1', 'org.mozilla.firefox.desktop:3', 'dev.vencord.Vesktop.desktop:4', 'code.desktop:2']

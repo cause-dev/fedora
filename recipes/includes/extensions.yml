@@ -1,5 +1,5 @@
 type: gnome-extensions
 install:
   - AppIndicator and KStatusNotifierItem Support
-  - 4478
-  - 16
+  # - 4478 # Net Speed
+  - 16 # Auto Move Windows
