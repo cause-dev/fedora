@@ -17,22 +17,14 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
-  - from-file: includes/packages.yml
-
-  - from-file: includes/scripts.yml
-
   - from-file: includes/fonts.yml
-
-  - from-file: includes/extensions.yml
-
-  - from-file: includes/gschema.yml
-
+  - from-file: includes/packages.yml
   - from-file: includes/bling.yml
-
+  - from-file: includes/extensions.yml
+  - from-file: includes/gschema.yml
   - from-file: includes/flatpaks.yml
-
-  - from-file: includes/chezmoi.yml
-
   - from-file: includes/systemd.yml
-
+  - from-file: includes/scripts.yml
+  - from-file: includes/chezmoi.yml
+  
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
