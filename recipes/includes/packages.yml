@@ -2,21 +2,16 @@ type: dnf
 repos:
   copr:
     - atim/starship
-    - jdxcode/mise
-    - varlad/zellij
 install:
   packages:
-    - micro
     - starship
     - fish
     - android-tools
-    - mise
     - bat
     - lsd
     - age
     - podman-compose
     - podman-docker
-    - zellij
 remove:
   packages:
     # example: removing firefox (in favor of the flatpak)
