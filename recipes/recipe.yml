@@ -31,8 +31,6 @@ modules:
 
   - from-file: includes/flatpaks.yml
 
-  - from-file: includes/sysext.yml
-
   - from-file: includes/chezmoi.yml
 
   - from-file: includes/systemd.yml
