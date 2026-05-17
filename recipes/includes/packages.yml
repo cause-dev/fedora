@@ -10,7 +10,7 @@ install:
     - bat
     - lsd
     - age
-    - podman-compose
+    - docker-compose
     - podman-docker
 remove:
   packages:
