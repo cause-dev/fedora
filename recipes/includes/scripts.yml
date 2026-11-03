@@ -1,3 +1,4 @@
 type: script
 scripts:
   - set-shell.sh
+  - install-surge.sh
