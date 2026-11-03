@@ -1,6 +1,6 @@
 type: default-flatpaks
 configurations:
-  - scope: system
+  - scope: user
     # If no repo information is specified, Flathub will be used by default
     install: # system flatpaks we want all users to have and not remove
       - org.gnome.TextEditor
@@ -19,15 +19,14 @@ configurations:
       - org.gnome.Logs
       - org.gnome.Snapshot
       - org.mozilla.firefox # Firefox (Browser)
-      - com.github.neithern.g4music # Gapless (Music Player)
+      - io.bassi.Amberol # Amberol (Music Player)
       - io.github.flattool.Warehouse # Warehouse
       - com.github.tchx84.Flatseal # Flatseal
-      - io.github.diegopvlk.Cine # Cine (Media Player)
+      - org.videolan.VLC # VLC (Media Player)
       - io.github.IshuSinghSE.aurynk
-  - scope: user # Also add Flathub user repo, but no user packages
-    install:
       - dev.vencord.Vesktop # Vesktop (Discord)
       - org.cryptomator.Cryptomator # Cryptomator
       - md.obsidian.Obsidian # Obsidian
-      - be.alexandervanhee.gradia
       - io.github.wartybix.Constrict
+      - de.wwwtech.gitte
+      - org.localsend.localsend_app
