@@ -17,7 +17,7 @@ num-workspaces=4
 enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'Vitals@CoreCoding.com']
 
 [org.gnome.shell.extensions.auto-move-windows]
-application-list=['org.gnome.Ptyxis.desktop:1', 'org.mozilla.firefox.desktop:3', 'dev.vencord.Vesktop.desktop:4', 'code.desktop:2']
+application-list=['org.gnome.Ptyxis.desktop:1', 'org.mozilla.firefox.desktop:3', 'dev.vencord.Vesktop.desktop:4', 'dev.zed.Zed.desktop:2']
 
 [org.gnome.shell.extensions.vitals]
 update-time=1
