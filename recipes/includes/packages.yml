@@ -3,9 +3,9 @@ repos:
   copr:
     - atim/starship
   files:
-    - https://repo.protonvpn.com/fedora-%OS_VERSION%-stable/protonvpn-stable.repo
+    - https://repo.protonvpn.com/fedora-44-stable/protonvpn-stable.repo
   keys:
-    - https://repo.protonvpn.com/fedora-%OS_VERSION%-stable/public_key.asc
+    - https://repo.protonvpn.com/fedora-44-stable/public_key.asc
 install:
   packages:
     - starship
