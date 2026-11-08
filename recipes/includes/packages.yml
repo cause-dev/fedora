@@ -2,10 +2,6 @@ type: dnf
 repos:
   copr:
     - atim/starship
-  files:
-    - https://repo.protonvpn.com/fedora-44-stable/protonvpn-stable.repo
-  keys:
-    - https://repo.protonvpn.com/fedora-44-stable/public_key.asc
 install:
   packages:
     - starship
@@ -16,7 +12,6 @@ install:
     - age
     - docker-compose
     - podman-docker
-    - proton-vpn-gnome-desktop
 remove:
   packages:
     # example: removing firefox (in favor of the flatpak)
