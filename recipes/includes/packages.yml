@@ -1,10 +1,6 @@
 type: dnf
-repos:
-  copr:
-    - atim/starship
 install:
   packages:
-    - starship
     - fish
     - android-tools
     - bat
