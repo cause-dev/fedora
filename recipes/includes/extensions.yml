@@ -2,4 +2,3 @@ type: gnome-extensions
 install:
   - AppIndicator and KStatusNotifierItem Support
   - 1460 # Vitals
-  - 16 # Auto Move Windows
