@@ -8,6 +8,8 @@ install:
     - age
     - docker-compose
     - podman-docker
+    - noctalia
+    - niri
 remove:
   packages:
     - firefox
