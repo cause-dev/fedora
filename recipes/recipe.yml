@@ -1,27 +1,26 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-name: fedora
-description: This is my personal OS image.
+name: Fedora Gnome
+description: This is my personal Fedora Gnome OS image.
 
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 45 # latest is also supported if want new updates ASAP
+image-version: latest
 
-# module configuration, executed in order
-# you can include multiple instances of the same module
 modules:
   - type: files
     files:
-      - source: system
-        destination: / # copies files/system/* (* means everything inside it) into image's root folder /
+      - source: gnome/system
+        destination: /
 
-  - from-file: includes/packages.yml
-  - from-file: includes/fonts.yml
-  - from-file: includes/bling.yml
-  - from-file: includes/extensions.yml
-  - from-file: includes/gschema.yml
-  - from-file: includes/scripts.yml
-  - from-file: includes/chezmoi.yml
-  - from-file: includes/flatpaks.yml
-  - from-file: includes/systemd.yml
+  - from-file: includes/common/packages.yml
+  - from-file: includes/gnome/packages.yml
+  - from-file: includes/common/fonts.yml
+  - from-file: includes/gnome/bling.yml
+  - from-file: includes/gnome/extensions.yml
+  - from-file: includes/gnome/gschema.yml
+  - from-file: includes/common/scripts.yml
+  - from-file: includes/common/chezmoi.yml
+  - from-file: includes/common/flatpaks.yml
+  - from-file: includes/common/systemd.yml
 
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+  - type: signing

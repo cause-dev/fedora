@@ -1,0 +1,18 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+name: Fedora Niri
+description: This is my personal fedora niri image.
+
+base-image: ghcr.io/ublue-os/base-main
+image-version: latest
+
+modules:
+  - from-file: includes/common/packages.yml
+  - from-file: includes/niri/packages.yml
+  - from-file: includes/common/fonts.yml
+  - from-file: includes/common/scripts.yml
+  - from-file: includes/common/chezmoi.yml
+  - from-file: includes/common/flatpaks.yml
+  - from-file: includes/common/systemd.yml
+
+  - type: signing

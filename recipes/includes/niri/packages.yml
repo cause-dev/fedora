@@ -1,0 +1,17 @@
+type: dnf
+install:
+  packages:
+    - noctalia
+    - niri
+    - nautilus
+    - ptyxis
+  exclude:
+    - gnome-keyring
+    - waybar
+    - fuzzel
+    - swaylock
+    - alacritty
+    - mako
+    - swaync
+    - dunst
+    - notification-daemon

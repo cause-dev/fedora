@@ -1,0 +1,5 @@
+type: dnf
+remove:
+  packages:
+    - gnome-software
+    - PackageKit-glib
