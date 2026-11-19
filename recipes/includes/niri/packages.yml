@@ -5,6 +5,8 @@ install:
     - niri
     - nautilus
     - ptyxis
+    - greetd
+    - tuigreet
   exclude:
     - gnome-keyring
     - waybar
