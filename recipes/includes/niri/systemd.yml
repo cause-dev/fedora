@@ -2,3 +2,6 @@ type: systemd
 system:
   enabled:
     - greetd.service
+user:
+  enabled:
+    - oo7-daemon.service
