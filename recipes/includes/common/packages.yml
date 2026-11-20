@@ -12,3 +12,4 @@ remove:
   packages:
     - firefox
     - firefox-langpacks
+    - nvtop
