@@ -1,0 +1,6 @@
+type: script
+
+snippets:
+  - "systemd-sysusers"
+  - "systemd-tmpfiles --create /usr/lib/tmpfiles.d/noctalia-greeter.conf"
+  - "GREETER_USER=greeter /usr/bin/noctalia-greeter-apply-appearance --setup-system"
