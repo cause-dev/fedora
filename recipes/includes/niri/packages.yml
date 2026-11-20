@@ -1,37 +1,48 @@
-type: dnf
-repos:
-  cleanup: true
-  files:
-    - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
-install:
-  exclude:
-    - gnome-keyring
-    - waybar
-    - swaylock
-    - fuzzel
-    - alacritty
-
-  packages:
-    - install-weak-deps: false
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-list-v1.json
+modules:
+  - type: dnf
+    install:
+      install-weak-deps: false
+      exclude:
+        - gnome-keyring
+        - waybar
+        - swaylock
+        - fuzzel
+        - alacritty
       packages:
         - niri
-    - noctalia
-    - nautilus
-    - ptyxis
-    - greetd
-    - greetd-selinux
-    - noctalia-greeter
-    - xdg-desktop-portal
-    - xdg-desktop-portal-gnome
-    - xdg-desktop-portal-gtk
-    - pipewire
-    - wireplumber
-    - pipewire-pulseaudio
-    - NetworkManager-wifi
-    - tuned-ppd
-    - bluez
-    - oo7-daemon
-    - oo7-portal
-    - pam_oo7
-    - oo7-cli
-    - gcr
+
+  - type: dnf
+    repos:
+      cleanup: true
+      files:
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+    install:
+      exclude:
+        - gnome-keyring
+        - waybar
+        - swaylock
+        - fuzzel
+        - alacritty
+      packages:
+        - noctalia
+        - nautilus
+        - ptyxis
+        - greetd
+        - greetd-selinux
+        - noctalia-greeter
+        - xdg-desktop-portal
+        - xdg-desktop-portal-gnome
+        - xdg-desktop-portal-gtk
+        - pipewire
+        - wireplumber
+        - pipewire-pulseaudio
+        - NetworkManager-wifi
+        - tuned-ppd
+        - bluez
+        - oo7-daemon
+        - oo7-portal
+        - pam_oo7
+        - oo7-cli
+        - gcr
