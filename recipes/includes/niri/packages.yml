@@ -12,7 +12,6 @@ install:
     - greetd
     - noctalia-greeter
     - terra-release
-    - dbus-daemon
   exclude:
     - gnome-keyring
     - waybar
