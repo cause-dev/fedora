@@ -7,6 +7,11 @@ base-image: ghcr.io/ublue-os/base-main
 image-version: latest
 
 modules:
+  - type: files
+    files:
+      - source: niri/system
+        destination: /
+
   - from-file: includes/common/packages.yml
   - from-file: includes/niri/packages.yml
   - from-file: includes/common/fonts.yml
