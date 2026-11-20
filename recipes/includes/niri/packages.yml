@@ -4,21 +4,34 @@ repos:
   files:
     - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
 install:
-  packages:
-    - noctalia
-    - niri
-    - nautilus
-    - ptyxis
-    - greetd
-    - noctalia-greeter
-    - terra-release
   exclude:
     - gnome-keyring
     - waybar
-    - fuzzel
     - swaylock
+    - fuzzel
     - alacritty
-    - mako
-    - swaync
-    - dunst
-    - notification-daemon
+
+  packages:
+    - install-weak-deps: false
+      packages:
+        - niri
+    - noctalia
+    - nautilus
+    - ptyxis
+    - greetd
+    - greetd-selinux
+    - noctalia-greeter
+    - xdg-desktop-portal
+    - xdg-desktop-portal-gnome
+    - xdg-desktop-portal-gtk
+    - pipewire
+    - wireplumber
+    - pipewire-pulseaudio
+    - NetworkManager-wifi
+    - tuned-ppd
+    - bluez
+    - oo7-daemon
+    - oo7-portal
+    - pam_oo7
+    - oo7-cli
+    - gcr

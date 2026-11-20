@@ -1,6 +1,7 @@
 type: script
 
 snippets:
+  - "systemctl set-default graphical.target"
   - "systemd-sysusers"
-  - "systemd-tmpfiles --create /usr/lib/tmpfiles.d/noctalia-greeter.conf"
-  - "GREETER_USER=greeter /usr/bin/noctalia-greeter-apply-appearance --setup-system"
+  - "systemd-tmpfiles --create noctalia-greeter.conf"
+  - "GREETER_USER=greetd /usr/bin/noctalia-greeter-apply-appearance --setup-system"

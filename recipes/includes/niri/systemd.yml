@@ -5,3 +5,4 @@ system:
 user:
   enabled:
     - oo7-daemon.service
+    - gcr-ssh-agent.socket
