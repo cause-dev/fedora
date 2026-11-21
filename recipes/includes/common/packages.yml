@@ -13,6 +13,7 @@ install:
     - docker-compose
     - podman-docker
     - mise
+    - libatomic
 remove:
   packages:
     - firefox
