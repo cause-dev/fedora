@@ -2,8 +2,6 @@
 
 See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
 
-After setup, it is recommended you update this README to describe your custom image.
-
 ## Installation
 
 > [!WARNING]  
@@ -14,7 +12,11 @@ To rebase an existing atomic Fedora installation to the latest build:
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
 
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/cause-dev/fedora:latest
+  bootc switch ghcr.io/cause-dev/fedora-gnome:latest # If you want to use Gnome
+  ```
+
+  ```
+  bootc switch ghcr.io/cause-dev/fedora-niri:latest # If you want to use Niri
   ```
 - Reboot to complete the rebase:
 
@@ -24,7 +26,11 @@ To rebase an existing atomic Fedora installation to the latest build:
 - Then rebase to the signed image, like so:
 
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/cause-dev/fedora:latest
+  bootc switch --enforce-container-sigpolicy ghcr.io/cause-dev/fedora-gnome:latest # Gnome
+  ```
+
+  ```
+  bootc switch --enforce-container-sigpolicy ghcr.io/cause-dev/fedora-niri:latest # Niri
   ```
 - Reboot again to complete the installation
 
