@@ -1,4 +1,8 @@
 type: dnf
+repos:
+  cleanup: true
+  copr:
+    - jdxcode/mise
 install:
   packages:
     - fish
@@ -8,6 +12,7 @@ install:
     - age
     - docker-compose
     - podman-docker
+    - mise
 remove:
   packages:
     - firefox
