@@ -13,7 +13,8 @@ install:
     - docker-compose
     - podman-docker
     - mise
-    - libatomic
+    - libatomic # Dependency for mise
+    - gcc # Dependency for rust compilation
 remove:
   packages:
     - firefox
