@@ -9,7 +9,6 @@ install:
     - android-tools
     - bat
     - lsd
-    - age
     - docker-compose
     - podman-docker
     - mise

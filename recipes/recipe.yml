@@ -19,7 +19,6 @@ modules:
   - from-file: includes/gnome/extensions.yml
   - from-file: includes/gnome/gschema.yml
   - from-file: includes/common/scripts.yml
-  - from-file: includes/common/chezmoi.yml
   - from-file: includes/common/flatpaks.yml
   - from-file: includes/common/systemd.yml
 
