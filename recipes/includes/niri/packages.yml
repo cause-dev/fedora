@@ -26,6 +26,7 @@ modules:
         - gcr
         - flatpak
         - mesa-vulkan-drivers
+        - zram-generator-defaults
 
   - type: dnf
     repos:
