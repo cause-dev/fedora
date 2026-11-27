@@ -5,7 +5,7 @@ system:
     - nightly-enforcer.service
   disabled:
     - system-flatpak-setup.timer
-    - rpm-ostreed-automatic.timer
+    - bootc-fetch-apply-updates.timer
 
 user:
   disabled:
