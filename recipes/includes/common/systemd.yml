@@ -4,7 +4,6 @@ system:
     - nightly-shutdown.timer
     - nightly-enforcer.service
   disabled:
-    - system-flatpak-setup.timer
     - bootc-fetch-apply-updates.timer
 
 user:

@@ -2,21 +2,24 @@ type: default-flatpaks
 configurations:
   - scope: user
     # If no repo information is specified, Flathub will be used by default
-    install: # system flatpaks we want all users to have and not remove
-      - org.gnome.TextEditor
-      - org.gnome.baobab
-      - org.gnome.clocks
-      - org.gnome.Loupe # Loupe (Image Viewer)
-      - org.gnome.DejaDup # DejaDub (Backup)
-      - org.gnome.FileRoller # File Roller
+    install:
+      - org.gnome.baobab # Disk Analyzer
+      - org.gnome.clocks # Clock
+      - org.gnome.Loupe # Image Viewer
+      - org.gnome.DejaDup # Backup
+      - org.gnome.FileRoller # Archiver
       - org.gnome.NautilusPreviewer
-      - org.gnome.Papers # Papers (Pdf Viewer)
-      - org.gnome.Calculator
-      - org.gnome.Calendar
-      - org.gnome.Logs
-      - org.gnome.Snapshot
-      - org.mozilla.firefox # Firefox (Browser)
-      - io.github.IshuSinghSE.aurynk
-      - org.cryptomator.Cryptomator # Cryptomator
-      - md.obsidian.Obsidian # Obsidian
-      - org.localsend.localsend_app
+      - org.gnome.Papers # Pdf Viewer
+      - org.gnome.Calculator # Calculator
+      - org.gnome.Calendar # Gnome Calendar
+      - org.mozilla.firefox # Web Browser
+      - io.github.IshuSinghSE.aurynk # Android Mirroring
+      - org.cryptomator.Cryptomator # Encrytion Tool
+      - md.obsidian.Obsidian # Markdown Editor
+      - org.localsend.localsend_app # File Sharing
+      - io.ente.auth # 2FA
+      - io.frama.tractor.carburetor # TOR Proxy
+      - io.github.giantpinkrobots.varia # Download Manager
+      - io.github.kolunmi.Bazaar # Flatpak App Store
+      - io.mpv.Mpv # Video Player
+      - it.mijorus.gearlever # AppImage Installer

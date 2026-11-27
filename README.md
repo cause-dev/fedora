@@ -1,6 +1,6 @@
 # fedora &nbsp; [![bluebuild build badge](https://github.com/cause-dev/fedora/actions/workflows/build.yml/badge.svg)](https://github.com/cause-dev/fedora/actions/workflows/build.yml)
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on their template.
 
 ## Installation
 
@@ -11,12 +11,16 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
 
-  ```
-  bootc switch ghcr.io/cause-dev/fedora-gnome:latest # If you want to use Gnome
-  ```
+  ### Gnome
 
   ```
-  bootc switch ghcr.io/cause-dev/fedora-niri:latest # If you want to use Niri
+  bootc switch ghcr.io/cause-dev/fedora-gnome:latest
+  ```
+
+  ### Niri
+
+  ```
+  bootc switch ghcr.io/cause-dev/fedora-niri:latest
   ```
 - Reboot to complete the rebase:
 
@@ -25,12 +29,16 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
 - Then rebase to the signed image, like so:
 
+  ### Gnome
+
   ```
   bootc switch --enforce-container-sigpolicy ghcr.io/cause-dev/fedora-gnome:latest # Gnome
   ```
 
+  ### Niri
+
   ```
-  bootc switch --enforce-container-sigpolicy ghcr.io/cause-dev/fedora-niri:latest # Niri
+  bootc switch --enforce-container-sigpolicy ghcr.io/cause-dev/fedora-niri:latest
   ```
 - Reboot again to complete the installation
 
