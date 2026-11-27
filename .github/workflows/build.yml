@@ -1,7 +1,7 @@
 name: bluebuild
 on:
   schedule:
-    - cron: "37 22 * * 6" # Saturday night build, avoiding peak hour congestion
+    - cron: "37 17 * * 6"
   push:
     paths-ignore: # don't rebuild if only documentation has changed
       - "**.md"
@@ -36,7 +36,5 @@ jobs:
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
           registry_token: ${{ github.token }}
           pr_event_number: ${{ github.event.number }}
-
-          # enabled by default, disable if your image is small and you want faster builds
           maximize_build_space: true
           chunkah: true

@@ -14,7 +14,7 @@ configurations:
       - org.gnome.Calendar # Gnome Calendar
       - org.mozilla.firefox # Web Browser
       - io.github.IshuSinghSE.aurynk # Android Mirroring
-      - org.cryptomator.Cryptomator # Encrytion Tool
+      - org.cryptomator.Cryptomator # Encryption Tool
       - md.obsidian.Obsidian # Markdown Editor
       - org.localsend.localsend_app # File Sharing
       - io.ente.auth # 2FA
