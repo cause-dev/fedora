@@ -1,16 +1,30 @@
-type: dnf
-repos:
-  cleanup: true
-  copr:
-    - jdxcode/mise
-install:
-  packages:
-    - fish
-    - android-tools
-    - bat
-    - lsd
-    - docker-compose
-    - podman-docker
-    - mise
-    - libatomic # Dependency for mise
-    - gcc # Dependency for rust compilation
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-list-v1.json
+
+modules:
+  - type: dnf
+    repos:
+      cleanup: true
+      copr:
+        - jdxcode/mise
+    install:
+      packages:
+        - fish
+        - android-tools
+        - bat
+        - lsd
+        - docker-compose
+        - podman-docker
+        - mise
+        - libatomic # Dependency for mise
+        - gcc # Dependency for rust compilation
+
+  - type: dnf
+    install:
+      packages:
+        - https://repo.protonvpn.com/fedora-%OS_VERSION%-stable/protonvpn-stable-release/protonvpn-stable-release-1.0.5-1.noarch.rpm
+
+  - type: dnf
+    install:
+      packages:
+        - proton-vpn-cli
