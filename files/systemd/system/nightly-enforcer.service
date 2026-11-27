@@ -1,12 +1,10 @@
 [Unit]
-Description=Prevent usage between 12AM and 5AM
-DefaultDependencies=no
-After=sysinit.target
+Description=Power off if booted during quiet hours (23:00-06:00)
+After=multi-user.target
 
 [Service]
 Type=oneshot
-# Logic: If hour is less than 05 (i.e., 00, 01, 02, 03, 04), shut down.
-ExecStart=/usr/bin/bash -c 'HOUR=$(date +%%H); if [ $HOUR -lt 05 ]; then /usr/bin/systemctl poweroff; fi'
+ExecStart=/usr/bin/bash -c 'h=$(date +%%H); if [ "$h" -ge 23 ] || [ "$h" -lt 6 ]; then /usr/bin/systemctl poweroff; fi'
 
 [Install]
 WantedBy=multi-user.target
