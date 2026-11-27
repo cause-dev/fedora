@@ -1,8 +1,5 @@
 type: systemd
 system:
-  enabled:
-    - nightly-shutdown.timer
-    - nightly-enforcer.service
   disabled:
     - bootc-fetch-apply-updates.timer
 
