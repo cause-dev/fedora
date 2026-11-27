@@ -2,8 +2,8 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-list-v1.json
 modules:
   - type: dnf
+
     install:
-      install-weak-deps: false
       exclude:
         - gnome-keyring
         - waybar
@@ -12,35 +12,20 @@ modules:
         - alacritty
       packages:
         - niri
-
-  - type: dnf
-    install:
-      exclude:
-        - gnome-keyring
-        - waybar
-        - swaylock
-        - fuzzel
-        - alacritty
-      packages:
         - noctalia
         - nautilus
         - ptyxis
         - greetd
         - greetd-selinux
-        - xdg-desktop-portal
-        - xdg-desktop-portal-gnome
-        - xdg-desktop-portal-gtk
-        - pipewire
-        - wireplumber
         - pipewire-pulseaudio
         - NetworkManager-wifi
-        - tuned-ppd
         - bluez
-        - oo7-daemon
         - oo7-portal
         - pam_oo7
         - oo7-cli
         - gcr
+        - flatpak
+        - mesa-vulkan-drivers
 
   - type: dnf
     repos:
@@ -48,6 +33,5 @@ modules:
       files:
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
     install:
-      no-gpgchecks: true
       packages:
         - noctalia-greeter

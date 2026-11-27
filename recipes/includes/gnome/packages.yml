@@ -3,3 +3,6 @@ remove:
   packages:
     - gnome-software
     - PackageKit-glib
+    - firefox
+    - firefox-langpacks
+    - nvtop

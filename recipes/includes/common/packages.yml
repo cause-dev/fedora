@@ -14,8 +14,3 @@ install:
     - mise
     - libatomic # Dependency for mise
     - gcc # Dependency for rust compilation
-remove:
-  packages:
-    - firefox
-    - firefox-langpacks
-    - nvtop
