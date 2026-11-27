@@ -1,3 +1,10 @@
-type: script
-scripts:
-  - set-shell.sh
+modules:
+  - type: script
+    scripts:
+      - set-shell.sh
+
+  - type: script
+    snippets:
+      - 'dnf install -y "https://repo.protonvpn.com/fedora-$(rpm -E %fedora)-stable/protonvpn-stable-release/protonvpn-stable-release-1.0.5-1.noarch.rpm"'
+      - "dnf install -y --refresh proton-vpn-cli || true"
+      - "rpm -q proton-vpn-cli proton-vpn-daemon"
