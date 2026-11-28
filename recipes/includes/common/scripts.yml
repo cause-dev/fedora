@@ -1,3 +1,3 @@
 type: script
 snippets:
-  - SYSTEMD_OFFLINE=1 dnf5 install -y proton-vpn-cli
+  - SYSTEMD_OFFLINE=1 dnf5 install -y proton-vpn-gnome-desktop

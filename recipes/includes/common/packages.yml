@@ -18,6 +18,7 @@ modules:
         - mise
         - libatomic # Dependency for mise
         - gcc # Dependency for rust compilation
+        - libappindicator-gtk3 # Dependency for Proton VPN GUI
 
   - type: dnf
     install:
