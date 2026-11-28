@@ -16,6 +16,7 @@ modules:
   - from-file: includes/niri/packages.yml
   - from-file: includes/common/fonts.yml
   - from-file: includes/common/scripts.yml
+  - from-file: includes/niri/scripts.yml
   - from-file: includes/niri/greeter-setup.yml
   - from-file: includes/common/flatpaks.yml
   - from-file: includes/common/systemd.yml
