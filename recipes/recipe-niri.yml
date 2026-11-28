@@ -22,4 +22,6 @@ modules:
   - from-file: includes/common/systemd.yml
   - from-file: includes/niri/systemd.yml
 
+  - type: initramfs
+
   - type: signing

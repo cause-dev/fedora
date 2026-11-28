@@ -30,6 +30,8 @@ modules:
         - zram-generator-defaults
         - which
         - just
+        - plymouth
+        - plymouth-system-theme
 
   - type: dnf
     repos:
