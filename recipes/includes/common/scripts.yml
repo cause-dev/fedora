@@ -1,8 +1,3 @@
-modules:
-  - type: script
-    scripts:
-      - set-shell.sh
-
-  - type: script
-    snippets:
-      - SYSTEMD_OFFLINE=1 dnf5 install -y proton-vpn-cli
+type: script
+snippets:
+  - SYSTEMD_OFFLINE=1 dnf5 install -y proton-vpn-cli
