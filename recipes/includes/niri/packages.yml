@@ -19,6 +19,7 @@ modules:
         - greetd-selinux
         - pipewire-pulseaudio
         - NetworkManager-wifi
+        - iwlwifi-mvm-firmware
         - bluez
         - oo7-portal
         - pam_oo7
