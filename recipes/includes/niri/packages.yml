@@ -28,6 +28,8 @@ modules:
         - flatpak
         - mesa-vulkan-drivers
         - zram-generator-defaults
+        - which
+        - just
 
   - type: dnf
     repos:
